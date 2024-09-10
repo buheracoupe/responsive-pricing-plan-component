@@ -1,0 +1,1 @@
+# responsive-pricing-plan-component
