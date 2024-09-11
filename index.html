@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plan Component</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="heading-container">
+            <h1 class="gradient-text">Supercharge your Entertainment</h1>
+            <h3 class="gradient-text">Flexible Plans and Pricing</h3>
+        </div>
+        <div class="type-btn-container">
+            <!-- skeptical about wrapping them up, think -->
+                <label id="monthly-label" for="monthly-radio">Monthly</label>
+            <input checked value="monthly" name="season" id="monthly-radio" type="radio">
+            <label id="annual-label" for="annual-radio">Annual</label>
+            <input value="annual" name="season" id="annual-radio" type="radio">
+            
+        </div>
+        <div class="pricing-container">
+            <div id="individuals" class="plan-type">
+                <h4>For Individuals</h4>
+                <p class=" individual price"><span class="amount">$9</span>.99/per month</p>
+                <ul class="individuals-list">
+                        <li>Larger library</li>
+                        <li>High-definition streaming</li>
+                        <li>Offline downloads</li>
+                        <li>Ad-free viewing</li>
+                        <li>Personalized recommendations</li>
+                </ul>
+                <button id="individuals-btn" class="plan-btn">Select Plan</button>
+            </div>
+            <div id="families" class="plan-type">
+                <h4>For Families</h4>
+                <p class=" family price"><span class="amount">$16</span>.99/per month</p>
+                <ul class="families-list">
+                    <li>Larger library</li>
+<li>High-definition streaming</li>
+<li>Up to four simultaneous streams</li>
+<li>Offline downloads</li>
+<li>Parental controls</li>
+                </ul>
+                <button id="families-btn" class="plan-btn">Select Plan</button>
+            </div>
+            <div id="teams" class="plan-type">
+                <h4>For Teams</h4>
+                <p class="team price"><span class="amount">$19</span>.99/per month</p>
+                <ul class="teams-lsit">
+                    <li>Entire library</li>
+<li>Ultra HD streaming</li>
+<li>Up to four simultaneous streams</li>
+<li>Offline downloads</li>
+<li>Team collaboration features</li>
+                </ul>
+                <button id="teams-btn" class="plan-btn">Select Plan</button>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
