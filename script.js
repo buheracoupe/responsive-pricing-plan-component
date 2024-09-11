@@ -7,24 +7,9 @@ const familyPrice = document.querySelector(".family.price");
 const teamsPrice = document.querySelector(".team.price");
 
 
-annualBtn.addEventListener("change", () =>{
-    if(annualBtn.checked){
-        console.log(annualBtn.checked)
-        annualLabel.classList.add("active");
-        monthlyLabel.classList.remove("active");
-        updatePlans()
+annualBtn.addEventListener("change", updatePlans)
 
-
-        }
-})
-
-monthlyBtn.addEventListener("change", () =>{
-    if(monthlyBtn.checked){
-        console.log(monthlyBtn.checked)
-        monthlyLabel.classList.add("active");
-        annualLabel.classList.remove("active");
-    }
-})
+monthlyBtn.addEventListener("change", updatePlans)
 
 window.onload = ()=>{
     monthlyBtn.checked = true;
@@ -34,7 +19,16 @@ window.onload = ()=>{
 }
 
 function updatePlans(){
+    if(annualBtn.checked) {
+        annualLabel.classList.add("active");
+        monthlyLabel.classList.remove("active");
 individualPrice.innerHTML = `<span class="amount">$65</span>.99 annualy`
-familyPrice.innerHTML = `<span class="amount">$105</span>.99 annualy`
-teamsPrice.innerHTML =  `<span class="amount">$160</span>.99 annualy`
+familyPrice.innerHTML = `<span class="amount">$155</span>.99 annualy`
+teamsPrice.innerHTML =  `<span class="amount">$199</span>.99 annualy`}
+    else {
+        monthlyLabel.classList.add("active");
+        annualLabel.classList.remove("active");
+    individualPrice.innerHTML = `<span class="amount">$9</span>.99 monthly`
+familyPrice.innerHTML = `<span class="amount">$16</span>.99 monthly`
+teamsPrice.innerHTML =  `<span class="amount">$19</span>.99 monthly`}
 }
