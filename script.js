@@ -5,7 +5,21 @@ const monthlyLabel = document.querySelector("#monthly-label");
 const individualPrice = document.querySelector(".individual.price");
 const familyPrice = document.querySelector(".family.price");
 const teamsPrice = document.querySelector(".team.price");
+const planBtns = document.querySelectorAll(".plan-btn");
+const mainContainer = document.querySelector(".main-container")
 
+planBtns.forEach((button) => {
+    button.addEventListener("mouseenter", () => {
+        mainContainer.classList.add("shadow");
+    });
+    button.addEventListener("mouseleave", () => {
+       mainContainer.classList.remove("shadow");
+    });
+    button.addEventListener("click", () => {
+        window.location.href = "./singup.html"
+    })
+
+})
 
 annualBtn.addEventListener("change", updatePlans)
 
@@ -22,13 +36,13 @@ function updatePlans(){
     if(annualBtn.checked) {
         annualLabel.classList.add("active");
         monthlyLabel.classList.remove("active");
-individualPrice.innerHTML = `<span class="amount">$65</span>.99 annualy`
-familyPrice.innerHTML = `<span class="amount">$155</span>.99 annualy`
-teamsPrice.innerHTML =  `<span class="amount">$199</span>.99 annualy`}
+individualPrice.innerHTML = `<span class="gradient-text-amount amount">$65</span>.99 annualy`
+familyPrice.innerHTML = `<span class="gradient-text-amount amount">$155</span>.99 annualy`
+teamsPrice.innerHTML =  `<span class="gradient-text-amount amount">$199</span>.99 annualy`}
     else {
         monthlyLabel.classList.add("active");
         annualLabel.classList.remove("active");
-    individualPrice.innerHTML = `<span class="amount">$9</span>.99 monthly`
-familyPrice.innerHTML = `<span class="amount">$16</span>.99 monthly`
-teamsPrice.innerHTML =  `<span class="amount">$19</span>.99 monthly`}
+    individualPrice.innerHTML = `<span class="gradient-text-amount amount">$9</span>.99 monthly`
+familyPrice.innerHTML = `<span class="gradient-text-amount amount">$16</span>.99 monthly`
+teamsPrice.innerHTML =  `<span class="gradient-text-amount amount">$19</span>.99 monthly`}
 }
